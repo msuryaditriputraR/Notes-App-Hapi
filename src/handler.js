@@ -26,7 +26,7 @@ const addNoteHandler = (request, h) => {
     if (isSuccess) {
         const response = h.response({
             status: 'success',
-            message: 'Catatan Berhasil Ditambahkan',
+            message: 'Catatan berhasil ditambahkan',
             data: {
                 noteId: id
             }
@@ -37,7 +37,7 @@ const addNoteHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Catatan Gagal Ditambahkan'
+        message: 'Catatan gagal ditambahkan'
     });
     response.code(500);
     return response;
@@ -68,7 +68,7 @@ const getNoteByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Catatan Tidak Ditemukan'
+        message: 'Catatan tidak ditemukan'
     });
     response.code(404);
     return response;
@@ -94,7 +94,7 @@ const editNoteByIdHandler = (request, h) => {
 
         const response = h.response({
             status: 'success',
-            message: 'Catatan Berhasil Diubah'
+            message: 'Catatan berhasil diperbarui'
         });
         response.code(200);
         return response;
@@ -102,7 +102,7 @@ const editNoteByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Catatan Gagal Diubah. Id tidak ditemukan'
+        message: 'Gagal memperbarui catatan. Id tidak ditemukan'
     });
     response.code(404);
     return response;
@@ -118,7 +118,7 @@ const deleteNoteByIdHandler = (request, h) => {
         notes.splice(index, 1);
         const response = h.response({
             status: 'success',
-            message: 'Catatan Berhasil Dihapus'
+            message: 'Catatan berhasil dihapus'
         });
         response.code(200);
         return response;
@@ -126,7 +126,7 @@ const deleteNoteByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Catatan Gagal Dihapus. Id Tidak Ditemukan'
+        message: 'Catatan gagal dihapus. Id tidak ditemukan'
     });
     response.code(404);
     return response;
