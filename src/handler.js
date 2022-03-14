@@ -10,7 +10,7 @@ const addNoteHandler = (request, h) => {
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
 
-    const newNotes = {
+    const newNote = {
         id,
         title,
         createdAt,
@@ -19,7 +19,7 @@ const addNoteHandler = (request, h) => {
         body
     };
 
-    notes.push(newNotes);
+    notes.push(newNote);
 
     const isSuccess = notes.filter(note => note.id == id).length > 0;
 
