@@ -29,4 +29,8 @@ class NotesService {
 
         return id;
     }
+
+    getNotes() {
+        return this._notes;
+    }
 }
