@@ -77,4 +77,22 @@ class NotesHandler {
             return response;
         }
     }
+
+    delelteNoteByIdHandler(request, h) {
+        try {
+            const { id } = request.params;
+            this._service.deleteNoteById(id);
+            return {
+                status: 'success',
+                message: 'Catatan berhasil dihapus'
+            };
+        } catch (error) {
+            const response = h.response({
+                status: 'fail',
+                message: 'Catatan gagal dihapus. Id tidak ditemukan'
+            });
+            response.code(404);
+            return response;
+        }
+    }
 }
