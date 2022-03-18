@@ -51,7 +51,7 @@ class NotesService {
         const updatedAt = new Date().toISOString();
         const query = {
             text: 'UPDATE notes SET title = $1, body = $2, tags = $3, updated_at = $4 WHERE id = $5 RETURNING id',
-            value: [title, body, tags, updatedAt, id]
+            values: [title, body, tags, updatedAt, id]
         };
 
         const result = await this._pool.query(query);
