@@ -58,4 +58,4 @@ class UsersService {
     }
 }
 
-module.export = UsersService;
+module.exports = UsersService;
